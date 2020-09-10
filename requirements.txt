@@ -1,0 +1,5 @@
+Flask==1.1.2
+pytz==2019.3
+cryptography==2.7
+requests==2.22.0
+dataclasses-json==0.5.1

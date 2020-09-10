@@ -1,0 +1,18 @@
+{
+  "source": {
+    "endpoint": "https://registry-1.docker.io/v2",
+    "image": "library/hello-world",
+    "ref": "latest",
+    "auth": {
+      "url": "https://auth.docker.io/token?service=registry.docker.io&scope=repository:library/hello-world:pull",
+      "token_type": "Bearer"
+    }
+
+  },
+  "targets": [
+    {
+      "endpoint": "http://localhost:5000/v2",
+      "overwrite": true
+    }
+  ]
+}
