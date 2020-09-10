@@ -1,6 +1,8 @@
 # pydlit
 **Daemon Less docker Image Transfer microservice on Python.**
 
+Built in colaboration with **[@swoehrl-mw](https://github.com/swoehrl-mw)**
+
 ## Overview
 
 It is designed to distribute a docker image from one source to multiple target repositories.
