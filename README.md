@@ -1,7 +1,7 @@
 # pydlit
 **Daemon Less docker Image Transfer microservice on Python.**
 
-Built in colaboration with **[@swoehrl-mw](https://github.com/swoehrl-mw)**
+Built in collaboration with **[@swoehrl-mw](https://github.com/swoehrl-mw)**
 
 ## Overview
 
