@@ -8,5 +8,5 @@ before_install:
 
 script:
   - docker run -d --net=host pydlit
-  - TMEP_JOB_ID=$(curl -XPOST -H "Content-Type: application/json" -d @example_request.json http://localhost:5000/api/distribute/image | jq -r '.id')
-  - curl -vf -XGET http://localhost:5000/api/distribute/image/$TMEP_JOB_ID
+  - TEMP_JOB_ID=${curl -XPOST -H "Content-Type: application/json" -d @example_request.json http://localhost:5000/api/distribute/image | jq -r '.id'}
+  - curl -vf -XGET http://localhost:5000/api/distribute/image/$TEMP_JOB_ID
