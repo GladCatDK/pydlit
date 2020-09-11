@@ -4,6 +4,7 @@
 
 **Daemon Less docker Image Transfer microservice on Python.**
 
+Built in collaboration with **[@swoehrl-mw](https://github.com/swoehrl-mw)**
 
 ## Overview
 
