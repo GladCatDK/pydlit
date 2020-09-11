@@ -49,7 +49,7 @@ Possible job states are: `QUEUED`, `RUNNING`, `FINISHED` and `FAILED`.
     "ref": "<Image version>",
     "auth": { <Optional. Onyl requiered if registry requiers authentication>
       "url": "<Authentication Endpoint. If authentication is requieres scope and service definition, include them in this URL.>",
-      "token_type": "<Token type can either be JWT or Baerer>"
+      "token_type": "<Token type can either be JWT or Bearer>"
       "header": "<If authentication requieres a header, put it here.>"
       "json": "<If authentication requieres a JSON payload, put it here.>"
       "basicauth": { <Optional. If the registry authentifies by BasicAtuh, put the data here. Token setup will be ignored, if BasicAuth is used.>
