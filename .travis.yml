@@ -7,6 +7,6 @@ before_install:
   - docker build --tag pydlit:latest .
 
 script:
-  - docker run --net=host pydlit
+  - docker run -d --net=host pydlit
   - TMEP_JOB_ID=$(curl -XPOST -H "Content-Type: application/json" -d @example_request.json http://localhost:5000/api/distribute/image | jq -r '.id')
   - curl -vf -XGET http://localhost:5000/api/distribute/image/$TMEP_JOB_ID
