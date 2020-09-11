@@ -1,2 +1,0 @@
-export JOB_ID=$(curl -X POST -H "Content-Type: application/json" -d @example_request.json http://localhost:5000/api/distribute/image | jq -r '.id')
-curl -v -XGET http://localhost:5000/api/distribute/image/$JOB_ID
