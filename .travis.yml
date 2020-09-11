@@ -7,8 +7,5 @@ before_install:
   - docker build --tag pydlit:latest .
 
 script:
-  - docker run -d --net=host pydlit
-  - docker ps
-  - "TEMP_JOB_ID=${curl -XPOST -H \"Content-Type: application/json\" -d @example_request.json http://localhost:5001/api/distribute/image | jq -r \".id\"}"
-  - curl -vf -XGET http://localhost:5001/api/distribute/image/$TEMP_JOB_ID
-  - docker ps
+  - chmod u+x test.sh
+  - ./test.sh

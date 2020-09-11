@@ -31,10 +31,9 @@ def distribute_image():
 def get_image_sync_status(job_id):
     job_status = docker_sync_service.get_job_status(job_id)
     if job_status:
-        job_status.value = job_status.value.name
-        dct = asdict(job_status)
-        print(dct)
-        return json.dumps(dct)
+        job_dct = asdict(job_status)
+        job_dct["value"] = job_status.value.name
+        return json.dumps(job_dct)
     else:
         return dict(status="error", msg="job with id not found"), 404
 
