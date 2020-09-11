@@ -6,9 +6,6 @@ from requests.auth import HTTPBasicAuth
 from .model import *
 from ..util.log import logger
 
-'''
-This utility is built to transfer docker images from the GitLab docker registry in source to the registries in the targets.
-'''
 LAYER_KEY_V2 = "layers"
 MANIFEST_V2_CONTENT_TYPE = "application/vnd.docker.distribution.manifest.v2+json"
 

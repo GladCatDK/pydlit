@@ -1,4 +1,7 @@
 # pydlit
+
+[![Build Status](https://travis-ci.com/GladCatDK/pydlit.svg?token=8z7XWnDHNg7yb5hEZcjp&branch=master)](https://travis-ci.com/GladCatDK/pydlit)
+
 **Daemon Less docker Image Transfer microservice on Python.**
 
 Built in collaboration with **[@swoehrl-mw](https://github.com/swoehrl-mw)**
