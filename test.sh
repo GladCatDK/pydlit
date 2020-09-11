@@ -5,6 +5,6 @@ sleep 15
 RESULT=$(curl -vf -XGET http://localhost:5001/api/distribute/image/$TEMP_JOB_ID | jq -r ".value")
 
 if [[ "$RESULT" != "FINISHED" ]]; then
-echo "Test failed."
+echo "Test failed. Result: $RESULT"
 exit 1
 fi
