@@ -47,12 +47,12 @@ Possible job states are: `QUEUED`, `RUNNING`, `FINISHED` and `FAILED`.
     "endpoint": "<Docker registry V2 endpoint>",
     "image": "<Image name / path>",
     "ref": "<Image version>",
-    "auth": { <Optional. Onyl requiered if registry requiers authentication>
-      "url": "<Authentication Endpoint. If authentication is requieres scope and service definition, include them in this URL.>",
-      "token_type": "<Token type can either be JWT or Bearer>"
-      "header": "<If authentication requieres a header, put it here.>"
-      "json": "<If authentication requieres a JSON payload, put it here.>"
-      "basicauth": { <Optional. If the registry authentifies by BasicAtuh, put the data here. Token setup will be ignored, if BasicAuth is used.>
+    "auth": { 
+      "url": "<Authentication Endpoint. If authentication is requiring scope and service definition, include them in this URL.>",
+      "token_type": "<Token type can either be JWT or Bearer>",
+      "header": "<If authentication requires a header, put it here.>",
+      "json": "<If authentication requires a JSON payload, put it here.>",
+      "basicauth": {
         "user": "<username>",
         "password": "<password>"
       }
@@ -62,10 +62,12 @@ Possible job states are: `QUEUED`, `RUNNING`, `FINISHED` and `FAILED`.
   "targets": [
     {
       "endpoint":  "<Docker registry V2 endpoint>",
-      "overwrite": "<Boolean value: whether to overwrite an existing image in target registry. Default: 'false'>"
-      "verify_tls": "<Boolean value: whether enable or disable TLS mode for network communication. Default: 'false'.>"
-      "auth": {...}
+      "overwrite": "<Boolean value: whether to overwrite an existing image in target registry. Default: 'false'>",
+      "verify_tls": "<Boolean value: whether enable or disable TLS mode for network communication. Default: 'false'.>",
+      "auth": "{...}"
     }
   ]
 }
 ```
+The "auth" block is **optional**. It is only needed if registry requires authentication. The same is true for the embedded
+"basicauth" block. If the registry authenticates by BasicAuth, put the data here. **The token setup will be ignored, if BasicAuth is used.**
